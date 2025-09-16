@@ -1,0 +1,35 @@
+@mixin H1 {
+    font-size: 100px;
+    font-weight: 600;
+    font-family: Epilogue, sans-serif;
+}
+
+@mixin H2 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+}
+
+@mixin SubTitle {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+@mixin BodyText {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+@mixin H1-Mobile {
+    font-size: 65px;
+    font-weight: 600;
+    font-family: Epilogue, sans-serif;
+}
+
+@mixin H3 {
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 42px;
+}
