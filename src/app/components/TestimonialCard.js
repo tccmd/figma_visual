@@ -26,8 +26,10 @@ export default function TestimonialCard () {
               />
             ))}
           </p>
-          <p className="SubTitle">Gemma Nolen</p>
-          <p className="BodyText">Google</p>
+          <div className="ClienInfo">
+            <p className="SubTitle">Gemma Nolen</p>
+            <p className="BodyText">Google</p>
+          </div>
         </div>
       </div>
     </div>

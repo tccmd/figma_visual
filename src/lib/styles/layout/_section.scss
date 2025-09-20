@@ -1,13 +1,17 @@
+// * 전체 영역 접기   ⌘ + K  ⌘ + 0
+// * 전체 영역 펼치기 ⌘ + K  ⌘ + J
+// * 현재 영역 접기   ⌘ + ⌥ + [
+// * 현재 영역 펼치기 ⌘ + ⌥ + ]
+
 @use '../abstracts' as *;
 
 section {
-    width: 100%;
-
     &.HeaderSection {
         .part1 {
             display: flex;
             gap: 68px;
             padding: 42px 24px;
+            flex-wrap: wrap;
 
             .HeaderContent {
                 display: flex;
@@ -19,6 +23,11 @@ section {
                     flex-direction: column;
                     gap: 24px;
                 }
+            }
+
+            .HeaderImage-1 {
+                width: 100%;
+                object-fit: cover;
             }
         }
 
@@ -48,6 +57,7 @@ section {
         .part1 {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             gap: 24px;
             padding: 42px 24px;
             justify-content: space-between;
@@ -63,15 +73,30 @@ section {
     &.GallerySection {
         display: flex;
         flex-direction: column;
-        padding: 42px 24px;
         gap: 42px;
-        align-items: center;
+        padding: 42px 24px;
+
+        .H2 {
+            text-align: center;
+        }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 24px;
         }
+
+        @include respond(sm) {
+            align-items: center;
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+        }
+
+
     }
 
     &.TestimonialSection {
@@ -82,9 +107,17 @@ section {
         padding: 42px 24px;
 
         .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 24px;
+        }
+
+        @include respond(sm) {
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
         }
     }
 
@@ -92,13 +125,20 @@ section {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        padding: 42px 24px;
+        padding: 42px 24px 86px;
+
+        @include respond(sm) {
+            .ContactSectionContent {
+                gap: 142px;
+            }
+        }
 
         .ContactSectionContent {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            gap: 142px;
+            flex-wrap: wrap;
+            gap: 42px;
 
             .ContactInfo {
                 display: flex;
@@ -109,7 +149,7 @@ section {
                     display: flex;
                     flex-direction: column;
                     gap: 42px;
-                    width: 570px;
+                    // width: 570px;
                 }
 
                 .SocialLinks {
@@ -130,7 +170,8 @@ section {
                     gap: 12px;
 
                     input {
-                        width: 520px;
+                        max-width: 520px;
+                        min-width: 320px;
                         background: #F3F3F3;
                         @include BodyText;
                         border: none;
@@ -138,7 +179,7 @@ section {
 
                         &::placeholder {
                             @include BodyText;
-                            color: #2D2D2D;
+                            // color: #2D2D2D;
                         }
                     }
                 }

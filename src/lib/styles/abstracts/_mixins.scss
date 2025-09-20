@@ -2,7 +2,6 @@
     font-size: 100px;
     font-weight: 600;
     line-height: auto;
-    font-family: Epilogue, sans-serif;
 }
 
 @mixin H2 {
@@ -26,7 +25,6 @@
 @mixin H1-Mobile {
     font-size: 65px;
     font-weight: 600;
-    font-family: Epilogue, sans-serif;
 }
 
 @mixin H3 {
