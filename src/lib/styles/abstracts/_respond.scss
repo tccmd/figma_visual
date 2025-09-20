@@ -1,0 +1,50 @@
+@use "sass:map";
+// ================================
+// 반응형 브레이크포인트
+// ================================
+// 모든 기기 대은 실무 추천
+// 모바일(0 ~ 480px): 손가락 터치 UI → 버튼 크게, 글씨 크게
+// 태블릿 세로(~768px): 2단 레이아웃 시작
+// 태블릿 가로 / 작은 노트북(~1024px): 2~3단 레이아웃
+// 데스크톱(~1280px): 본문 영역 최대 폭 1200px 내외로 제한
+// 대형 모니터(1440px 이상): 양옆 여백 늘리고 가독성 유지
+$breakpoints: (
+    base: 0px,
+    sm: 480px,
+    padv: 769px,
+    padh: 1024px,
+    xl: 1280px,
+    2xl: 1440px,
+    3xl: 1920px,
+);
+
+// 크롬 브라우저 최소 500px
+// IPad Air 3
+// 세로: 834px
+// 가로: 1112px
+// MacbookAir: 1440px
+// IPhone: 393px
+
+// ================================
+// Media Query Mixin
+// ================================
+// 범위 제어
+@mixin respond($from, $to: null) {
+    @if map.has-key($breakpoints, $from) {
+        @if $to !=null and map.has-key($breakpoints, $to) {
+            @media (min-width: map.get($breakpoints, $from)) and (max-width: map.get($breakpoints, $to)) {
+                @content;
+            }
+        }
+
+        @else {
+            @media (min-width: map.get($breakpoints, $from)) {
+                @content;
+            }
+        }
+    }
+
+    @else {
+        @warn "⚠️ '#{$from}' is not a valid breakpoint!";
+    }
+}

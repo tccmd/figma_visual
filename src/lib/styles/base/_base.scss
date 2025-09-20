@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    margin: 0 auto
+}
+
+.H1 {
+    @include H1;
+}
+
+.H2 {
+    @include H2;
+}
+
+.SubTitle {
+    @include SubTitle;
+}
+
+.BodyText {
+    @include BodyText;
+}
+
+.H1-Mobile {
+    @include H1-Mobile;
+}
+
+.H3 {
+    @include H3;
+}

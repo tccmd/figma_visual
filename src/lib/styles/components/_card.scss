@@ -1,0 +1,76 @@
+.SkillsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
+    padding: 64px 42px;
+
+    .TitleDescription {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        white-space: pre-wrap;
+    }
+}
+
+.part2 {
+    .SkillsCard {
+        display: flex;
+        flex-direction: row;
+        gap: 42px;
+        padding: 64px 42px;
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .TitleDescription {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            white-space: normal;
+            text-align: start;
+            width: 414px;
+        }
+    }
+}
+
+.GalleryCard {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .TitleDescription {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.TestimonialCard {
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+    padding: 42px;
+    background: #F3F3F3;
+    // white-space: pre-wrap;
+    // white-space: break-spaces;
+
+    .ClientImageInfo {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        .ClientImage {
+            border-radius: 50%;
+        }
+
+        .ClientInfoStars {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    }
+}

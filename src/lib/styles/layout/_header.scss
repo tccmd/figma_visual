@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.header {
+    .nav {
+        & {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 42px
+        }
+
+        &__logo {
+            @include SubTitle;
+        }
+
+        &__links {
+            list-style: none;
+            display: inline-flex;
+            gap: 24px;
+        }
+
+        &__link {
+            @include BodyText;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.LogoBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 42px 68px;
+
+    img {
+        width: 113px;
+        height: 46px;
+        object-fit: contain;
+    }
+}
